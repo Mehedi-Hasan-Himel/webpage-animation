@@ -1,1 +1,158 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/*
+   common code start
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "poppins" sans-serif;
+}
+
+.btn {
+  border: 2px solid #fff;
+  padding: 10px 35px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+
+.slide-left {
+  -webkit-animation: slide-left 1s linear forwards;
+          animation: slide-left 1s linear forwards;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+/*
+   common code end
+*/
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 0, 136, 0.5)), to(rgba(5, 0, 136, 0.5))), url(../img/watch.png);
+  background-image: linear-gradient(rgba(5, 0, 136, 0.5), rgba(5, 0, 136, 0.5)), url(../img/watch.png);
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.header__nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 8%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.header__nav-logo img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.header__nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+.header__nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.header__nav:hover {
+  background-color: #fff;
+}
+
+.header__nav:hover .header__nav-logo {
+  color: black;
+}
+
+.header__nav:hover ul li a {
+  color: black;
+}
+
+.content {
+  margin-top: 9%;
+  margin-left: 9%;
+  color: #fff;
+}
+
+.content h1 {
+  font-size: 120px;
+  line-height: 140px;
+  font-weight: 600;
+}
+
+.content p {
+  max-width: 500px;
+  line-height: 28px;
+  opacity: 0;
+}
+
+.content p.slide-left {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.content__link {
+  margin-top: 30px;
+  opacity: 0;
+}
+
+.content__link a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.content__link.slide-left {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+/*# sourceMappingURL=style.css.map */

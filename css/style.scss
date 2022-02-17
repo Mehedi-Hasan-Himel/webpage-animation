@@ -1,0 +1,113 @@
+/*
+   common code start
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins" sans-serif;
+}
+.btn {
+  border: 2px solid #fff;
+  padding: 10px 35px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+.slide-left {
+  animation: slide-left 1s linear forwards;
+}
+@keyframes slide-left {
+  0% {
+    transform: translate(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+/*
+   common code end
+*/
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 0, 136, 0.5), rgba(5, 0, 136, 0.5)),
+    url(../img/watch.png);
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    transition: 0.3s;
+    &-logo {
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+
+      img {
+        width: 60px;
+        margin-right: 10px;
+      }
+    }
+    ul {
+      li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+    }
+    &:hover {
+      background-color: #fff;
+    }
+    &:hover &-logo {
+      color: black;
+    }
+    &:hover ul li a {
+      color: black;
+    }
+  }
+}
+
+.content {
+  margin-top: 9%;
+  margin-left: 9%;
+  color: #fff;
+  h1 {
+    font-size: 120px;
+    line-height: 140px;
+    font-weight: 600;
+  }
+  p {
+    max-width: 500px;
+    line-height: 28px;
+    opacity: 0;
+  }
+  p.slide-left {
+    animation-delay: 1s;
+  }
+  &__link {
+    margin-top: 30px;
+    opacity: 0;
+    a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+  &__link.slide-left {
+    animation-delay: 2s;
+  }
+}
